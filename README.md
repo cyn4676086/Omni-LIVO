@@ -1,6 +1,6 @@
 # Omni-LIVO
 
-Omni-LIVO is a multi-camera extension of FAST-LIVO2 with enhanced robustness for LiDAR-Inertial-Visual Odometry. This project extends the original framework to support multiple cameras for improved tracking performance in challenging environments. To match the wide field of view of modern LiDAR sensors, multiple cameras must be hardware-synchronized with external triggering to ensure precise temporal alignment.
+Omni-LIVO is a multi-camera extension of FAST-LIVO2 with enhanced robustness for LiDAR-Inertial-Visual Odometry(FAST-LIVO2-MultiCamera). This project extends the original framework to support multiple cameras for improved tracking performance in challenging environments. To match the wide field of view of modern LiDAR sensors, multiple cameras must be hardware-synchronized with external triggering to ensure precise temporal alignment.
 
 ## Acknowledgments
 
