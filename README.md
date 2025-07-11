@@ -20,16 +20,16 @@ This system builds upon FAST-LIVO2 to provide:
 ## Environment Requirements
 - Omni-LIVO environmrnt is as same as FAST-LIVO2
 
-### 2.1 Ubuntu and ROS
+### Ubuntu and ROS
 - Ubuntu 18.04~20.04
 - [ROS Installation](http://wiki.ros.org/ROS/Installation)
 
-### 2.2 PCL && Eigen && OpenCV
+### PCL && Eigen && OpenCV
 - PCL>=1.8, Follow [PCL Installation](https://pointclouds.org/downloads/)
 - Eigen>=3.3.4, Follow [Eigen Installation](https://eigen.tuxfamily.org/index.php?title=Main_Page)
 - OpenCV>=4.2, Follow [OpenCV Installation](https://opencv.org/get-started/)
 
-### 2.3 Sophus
+### Sophus
 Sophus Installation for the non-templated/double-only version:
 
 ```bash
@@ -41,7 +41,7 @@ make
 sudo make install
 ```
 
-### 2.4 Vikit
+### Vikit
 Vikit contains camera models, some math and interpolation functions that we need. Vikit is a catkin project, therefore, download it into your catkin workspace source folder.
 
 ```bash
