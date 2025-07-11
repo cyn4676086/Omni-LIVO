@@ -99,6 +99,7 @@ Currently tested with:
 ## Status
 
 🚧 **Work in Progress** - More documentation and examples will be added as the project develops.
+📝 **Paper Under Review** - Our paper is currently under review. The complete source code will be released upon acceptance.
 
 
 *Detailed documentation and paper will be available upon publication.*
