@@ -102,6 +102,8 @@ roslaunch omni_livo your_dataset.launch
 
 Currently tested with:
 - Hilti SLAM Challenge 2022 dataset
+- Hilti SLAM Challenge 2023 dataset
+- New College dataset
 - Custom multi-camera dataset with mid360 and 4 cameras
 
 
