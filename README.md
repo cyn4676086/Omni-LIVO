@@ -1,5 +1,5 @@
 # Omni-LIVO
-
+This repository contains the implementation and dataset for Omni-LIVO, a tightly-coupled multi-camera visual-inertial-LiDAR odometry system. Our system effectively bridges the spatial perception mismatch between wide-FOV LiDAR sensors and traditional narrow-FOV camera setups through innovative cross-camera direct tracking and unified optimization.
 Omni-LIVO is a multi-camera extension of FAST-LIVO2 with enhanced robustness for LiDAR-Inertial-Visual Odometry(FAST-LIVO2-MultiCamera). This project extends the original framework to support multiple cameras for improved tracking performance in challenging environments. To match the wide field of view of modern LiDAR sensors, multiple cameras must be hardware-synchronized with external triggering to ensure precise temporal alignment.
 
 ## Status
@@ -12,20 +12,41 @@ Omni-LIVO is a multi-camera extension of FAST-LIVO2 with enhanced robustness for
 ## Acknowledgments
 
 We sincerely thank the authors of [FAST-LIVO2](https://github.com/hku-mars/FAST-LIVO2) for their outstanding work and for making their code open source. This project would not have been possible without their excellent foundation in LiDAR-Inertial-Visual Odometry. We are grateful for their contribution to the robotics and SLAM community.
-
 Special thanks to:
 - The FAST-LIVO2 development team at HKU-MARS
 - The entire open-source robotics community for their collaborative spirit
 
 ## Overview
-
-This system builds upon FAST-LIVO2 to provide:
 - Multi-camera visual odometry support
 - Enhanced robustness in challenging scenarios
 - Improved tracking performance through multiple viewpoints
-## Ovmni-LIVO Dataset
-Link: https://pan.baidu.com/s/1an5d8usztm1zgqy57lun7w?pwd=74ih Password: 74ih 
+## Omni-LIVO Dataset
+LINK: https://pan.baidu.com/s/1an5d8usztm1zgqy57lun7w?pwd=74ih
+Password: 74ih 
+### Sensor Configuration
 
+Our multi-sensor data collection platform features the following specifications:
+
+| **Component** | **Model/Type** | **Specifications** | **Frequency** |
+|---------------|----------------|-------------------|---------------|
+| **LiDAR** | LIVOX MID360 | • 360° horizontal FOV<br>• 59° vertical FOV<br>• 0.1-70m range<br>• 200,000 pts/s | 10 Hz |
+| **IMU** | ICM40609 (built-in MID360) | • 6-DOF inertial measurement<br>• Accelerometer + Gyroscope | 200 Hz |
+| **Camera Array** | JHEM306GC-HM | • 1024×768 resolution<br>• Cross-pattern configuration<br>• Hardware-level synchronization | 10 Hz |
+
+### Camera Configuration
+
+The four cameras are strategically arranged in a **cross-pattern configuration** to achieve near-omnidirectional visual coverage:
+
+```
+    Camera Front
+         |
+Camera  ---- Camera 1
+Left         Right
+         |
+    Camera Rear
+```
+
+This configuration synergistically complements the 360° LiDAR perception, enabling robust tracking even when objects transition between different camera views.
 
 ## Environment Requirements
 - Omni-LIVO environmrnt is as same as FAST-LIVO2
@@ -66,7 +87,7 @@ Clone the repository and catkin_make:
 
 ```bash
 cd ~/catkin_ws/src
-git clone https://github.com/your-repo/omni-livo.git
+git clone https://github.com/cyn4676086/omni-livo.git
 cd ../
 catkin_make
 source ~/catkin_ws/devel/setup.bash
