@@ -40,7 +40,7 @@ The four cameras are strategically arranged in a **cross-pattern configuration**
 ```
     Camera Front
          |
-Camera  ---- Camera 1
+Camera ----- Camera
 Left         Right
          |
     Camera Rear
